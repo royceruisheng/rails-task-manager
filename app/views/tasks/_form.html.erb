@@ -4,6 +4,10 @@
     <%= form.text_field :title %>
     <%= form.label :details, "Details:" %>
     <%= form.text_field :details %>
+    <% if @new %>
+      <%= form.check_box :completed %>
+      <%= form.label :completed, "Mark as complete" %>
+    <% end %>
     <%= form.submit %>
   <% end %>
 </div>

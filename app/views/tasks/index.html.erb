@@ -6,6 +6,7 @@
         <li>
           <%= render "completed", task: task %>
           <%= link_to task.title, task_path(task) %>
+          <a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/tasks/<%= task.id %>"><i class="fas fa-trash"></i></a>
         </li>
       <% end %>
     </ul>
