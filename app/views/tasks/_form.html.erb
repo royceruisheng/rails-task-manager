@@ -1,0 +1,9 @@
+<div class="form">
+  <%= form_for(@task) do |form| %>
+    <%= form.label :title, "Task:" %>
+    <%= form.text_field :title %>
+    <%= form.label :details, "Details:" %>
+    <%= form.text_field :details %>
+    <%= form.submit %>
+  <% end %>
+</div>

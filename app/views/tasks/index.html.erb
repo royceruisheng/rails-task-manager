@@ -1,0 +1,16 @@
+<div class="container">
+<h1>My tasks</h1>
+  <div>
+    <ul class="tasks-list">
+      <% @tasks.each do |task| %>
+        <li>
+          <%= render "completed", task: task %>
+          <%= link_to task.title, task_path(task) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div>
+    <i class="fas fa-plus"></i><%= link_to "Add a new task", new_task_path %>
+  </div>
+</div>

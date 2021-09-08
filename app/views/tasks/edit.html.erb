@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Create a new task</h1>
+    <div class="form">
+    <%= form_for(@edited_task) do |form| %>
+      <%= form.label :title, "Task:" %>
+      <%= form.text_field :title %>
+      <%= form.label :details, "Details:" %>
+      <%= form.text_field :details %>
+      <%= form.check_box :completed %>
+      <%= form.label :completed, "Mark as complete" %>
+      <%= form.submit %>
+    <% end %>
+  </div>
+  <%= link_to "Back to list", tasks_path %>
+</div>
